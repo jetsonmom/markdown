@@ -112,3 +112,29 @@ print("안녕하세요")
 - <b>LED 조명 제어</b>
 
 > <b>Tip:</b> 아두이노와 센서만 있으면 집에서도 쉽게 구현할 수 있어요!
+
+
+Arduino 코드
+#include <SimpleDHT.h>
+int pinDHT11 = 2;
+SimpleDHT11 dht11(pinDHT11);
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  byte temp = 0;
+  byte hum = 0;
+  dht11.read(&temp, &hum, NULL);
+  Serial.print("온도: ");
+  Serial.println(temp);
+  delay(30000); // 30초마다 읽기
+}
+
+Python 코드
+import serial
+ser = serial.Serial('/dev/ttyACM0', 9600)
+while True:
+    data = ser.readline().decode()
+    print(data.strip())
