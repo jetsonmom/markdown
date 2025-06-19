@@ -115,6 +115,7 @@ print("안녕하세요")
 
 
 Arduino 코드
+```
 #include <SimpleDHT.h>
 int pinDHT11 = 2;
 SimpleDHT11 dht11(pinDHT11);
@@ -131,10 +132,12 @@ void loop() {
   Serial.println(temp);
   delay(30000); // 30초마다 읽기
 }
-
+```
 Python 코드
+```
 import serial
 ser = serial.Serial('/dev/ttyACM0', 9600)
 while True:
     data = ser.readline().decode()
     print(data.strip())
+```
