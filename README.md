@@ -27,8 +27,13 @@ https://markdownlivepreview.com/)
 - 항목1
 - 항목2
   - 하위항목
+
+- chapter 1
+  - ai
+  - 
 1. 첫번째
 2. 두번째
+3. 
 [링크텍스트](https://example.com)  
 ![이미지설명](https://example.com/image.png)
 
